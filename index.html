@@ -61,13 +61,21 @@
           </nav>
       </div>
   </header>
-  <main>
-    <section>
-
-
+  <main class="main">
+    <section class="preview">
+     <div class="grid_preview">
+        <video id="video" src="videos/preview.mp4" autoplay loop muted style="max-width: 100%; height: auto;" alt="Видеоряд наших фруктов и ягод"></video>
+     <div class="grid_right-column">
+        <img src="images/main/delivery.jpg" class="delivery" alt="Готовые к доставке продукты">
+        <img src="images/main/discount.jpg" class="discount" alt="Куча вкуснейшей клубники">
+      </div>
+    </div>
     </section>
-
+    <section class="category fruits"></section>
+    <section class="category vegetables"></section>
+    <section class="category exotic"></section>
   </main>
-
+  
+  <script src="scripts/preview.js"></script>
   <script src="scripts/script.js"></script>
 </body>
