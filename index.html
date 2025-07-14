@@ -159,12 +159,40 @@
           </div>
         </div>
       </section>
-      <section class="category fruits"></section>
-      <section class="category vegetables"></section>
-      <section class="category exotic"></section>
+      <section class="category-section"></section>
+      <section id="fruits" class="category fruits">
+        <h1 class="fruits-heading"><span>Фрукты и ягоды</span></h1>
+        <div class="fruits section-div">
+        </div>
+      </section>
+
+      <section class="category vegetables">
+        <h1 class="vegetables-heading"><span>Овощи</span></h1>
+        <div class="vegetables section-div">
+        </div>
+      </section>
+
+      <section class="category exotic">
+        <h1 class="exotic-heading"><span>Экзотика</span></h1>
+        <div class="exotics section-div">
+        </div>
+      </section>
     </main>
 
+    <template id="product-template">
+      <article class="product">
+        <img class="product-image" src="" alt="">
+        <div class="product-description">
+          <h2 class="product-title"></h2>
+          <p class="product-cost"></p>
+          <button class="add-product">В корзину</button>
+        </div>
+      </article>
+    </template>
+
     <script src="scripts/preview.js"></script>
+    <script src="scripts/products.js"></script>
     <script src="scripts/script.js"></script>
+ 
   </body>
 </html>
