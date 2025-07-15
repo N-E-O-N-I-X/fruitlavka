@@ -196,6 +196,25 @@ button {
   height: 40px;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #e12709;
+  border-radius: 50%;
+  display: none; /* по умолчанию скрыта */
+}
+
+.cart-indicator.active {
+  display: block;
+}
+
 .cart svg path {
   transition: stroke 0.2s ease;
 }
@@ -217,7 +236,6 @@ button {
   fill: #fe9110;
 }
 
-/**/
 .cart:focus-within svg path {
   stroke: #fe9110;
   fill: #fdf7e6;
@@ -273,7 +291,6 @@ button {
   aspect-ratio: 1/1;
 }
 
-/* Скрыть бургер на десктопе */
 .burger-menu {
   display: none;
   background: #fe9110;
@@ -314,6 +331,32 @@ button {
 
   .menu.open {
     display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu.open .action-header-buttons {
+  width: 100%;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+  flex-direction: row;
+  }
+
+  .menu.open .action-header-buttons:hover {
+    background: #f8f8f8;
+  }
+
+  .menu.open .action-header-buttons svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -450,11 +493,11 @@ section {
 .category-section {
   margin-top: 60px;
   background-image: repeating-linear-gradient(
-    45deg,            /* угол наклона полосок */
-    #fd6214cb,          /* цвет полоски */
-    #fd6214cb 40px,     /* ширина полоски */
-    #fdf7e600 20px,     /* начало пробела */
-    #fdf7e600 80px      /* ширина пробела */
+    45deg,
+    #fd6214cb,
+    #fd6214cb 40px,
+    #fdf7e600 20px,
+    #fdf7e600 80px
   );
 }
 
@@ -466,11 +509,11 @@ section {
 @media (width < 800px) {
   .category-section {
     background-image: repeating-linear-gradient(
-    45deg,            /* угол наклона полосок */
-    #fd6214cb,          /* цвет полоски */
-    #fd6214cb 20px,     /* ширина полоски */
-    #fdf7e6 10px,     /* начало пробела */
-    #fdf7e6 40px      /* ширина пробела */
+    45deg,
+    #fd6214cb,
+    #fd6214cb 20px,
+    #fdf7e6 10px,
+    #fdf7e6 40px
   );
     margin-top: 30px;
   }
@@ -713,4 +756,202 @@ section {
 
 .product .add-product:focus-visible {
   background-color: #fd6314;
+}
+
+.cart-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.cart-control button {
+  background-color: #fe9110;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.cart-control button:hover {
+  background-color: #fd6314;
+}
+
+.cart-control button:focus-visible {
+  background-color: #fd6314;
+}
+
+@media (width < 500px) {
+  .cart-control {
+    gap: 8px;
+  }
+  .cart-control button {
+    padding: 4px 10px;
+  }
+}
+
+@media (width < 390px) {
+  .cart-control {
+    gap: 7px;
+  }
+  .cart-control button {
+    padding: 4px 10px;
+  }
+}
+
+.cart-control span {
+  font-size: clamp(0.8125rem, 0.7483rem + 0.274vw, 1.125rem);
+}
+
+.cart-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  max-width: 800px;
+  height: 97vh;
+  background: #fff;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (width < 825px) {
+  .cart-popup  {
+    width: 80%;
+  }
+}
+
+@media (width < 560px) {
+  .cart-popup  {
+    width: 90%;
+  }
+}
+
+.cart-popup.hidden {
+  display: none;
+}
+
+.cart-item {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  min-width: 0; 
+  font-size: 16px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0 auto;
+}
+
+@media (width < 1000px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-controls {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+
+.cart-item-controls button {
+  background-color: #fe9110;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.cart-item-controls button:hover {
+  background-color: #fd6314;
+}
+
+.cart-item-controls button:focus-visible {
+  background-color: #fd6314;
+}
+
+
+.cart-summary {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 2px solid #fe9110;
+  padding-top: 10px;
+}
+
+.cart-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-popup-buttons button{ 
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: opacity 0.3s, scale 0.3s;
+  outline: none;
+}
+
+.cart-popup-buttons button:hover {
+  opacity: 0.9;
+  scale: 1.1;
+}
+
+.cart-popup-buttons button:focus-visible {
+  opacity: 0.9;
+  scale: 1.1;
+}
+
+.close-cart {
+  background-color: #e12709;
+}
+
+.send-to-telegram {
+  background-color: #fd6314;
+}
+
+.attencion span {
+  color: #e12709;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 0.9486rem + 0.2192vw, 1.25rem);
+}
+
+.attencion {
+  font-size: clamp(0.8125rem, 0.774rem + 0.1644vw, 1rem);
 }

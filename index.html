@@ -8,7 +8,6 @@
     <link rel="icon" href="images/icon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png" />
     <link rel="stylesheet" href="styles/scrollbar.css" />
-    <link rel="stylesheet" href="popups.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
@@ -75,12 +74,12 @@
       </button>
 
       <div class="header-buttons">
-        <!-- Бургер (показывается на мобилках) -->
+        
         <button class="burger-menu" aria-label="Открыть меню">☰</button>
 
-        <!-- Основное меню (видно только на десктопе или по клику на бургер) -->
         <nav class="menu">
           <button class="cart action-header-buttons">
+            <span class="cart-indicator"></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -205,5 +204,17 @@
     <script src="scripts/products.js"></script>
     <script src="scripts/script.js"></script>
  
+    <div class="cart-popup hidden">
+      <h2>Корзина</h2>
+      <div class="cart-items"></div>
+      <div class="cart-summary">
+        <strong>Примерная стоимость без учета доставки:</strong> <span class="cart-total">0 ₽</span>
+      </div>
+      <div class="cart-popup-buttons">
+        <button class="send-to-telegram">Купить</button>
+        <button class="close-cart">Закрыть</button>
+      </div>
+      <p class="attencion"><span>Внимание</span><br>Кнопка "Купить" перебросит вас в чат с менеджером, где вы сможете обсудить заказ подробнее, учитывая время и место доставки.</p>
+    </div>
   </body>
 </html>
