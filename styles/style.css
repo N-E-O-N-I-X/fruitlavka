@@ -31,7 +31,7 @@ button {
     margin: 0;
     width: 86%;
     min-height: 80px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.849);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
@@ -110,13 +110,11 @@ button {
   }
 }
 
-
 @media (width < 650px) {
   .logo-2 {
     display: none;
   }
 }
-
 
 .header-image {
     height: 100px;
@@ -127,8 +125,6 @@ button {
     -webkit-filter: drop-shadow(5px 5px 5px #fe6710);
     filter: drop-shadow(2px 2px 4px #fe6710);
 }
-
-
 
 .header .search-form {
   position: relative;
@@ -326,6 +322,16 @@ button {
   display: grid;
   gap: 20px;
   background-color: #fdf7e6;
+  background-image: radial-gradient(#fe93101e 30px, transparent 10px);
+  background-size: 120px 120px;
+  background-attachment: fixed;
+}
+
+@media (width < 800px) {
+  .main {
+    background-image: radial-gradient(#fe93101e 15px, transparent 10px);
+    background-size: 60px 60px;
+  }
 }
 
 .preview {
@@ -442,16 +448,21 @@ section {
 }
 
 .category-section {
-  background-color: #fdf7e6;
+  margin-top: 60px;
   background-image: repeating-linear-gradient(
     45deg,            /* угол наклона полосок */
     #fd6214cb,          /* цвет полоски */
     #fd6214cb 40px,     /* ширина полоски */
-    #fdf7e6 20px,     /* начало пробела */
-    #fdf7e6 80px      /* ширина пробела */
+    #fdf7e600 20px,     /* начало пробела */
+    #fdf7e600 80px      /* ширина пробела */
   );
 }
 
+@media (width < 1200px) {
+  .category-section {
+    margin-top: 40px;
+  }
+}
 @media (width < 800px) {
   .category-section {
     background-image: repeating-linear-gradient(
@@ -461,6 +472,7 @@ section {
     #fdf7e6 10px,     /* начало пробела */
     #fdf7e6 40px      /* ширина пробела */
   );
+    margin-top: 30px;
   }
 }
 
@@ -603,7 +615,6 @@ section {
 
 @media (width < 1200px) {
   .section-div{
-    grid-template-columns: 1fr 1fr;
     column-gap: 12px;
     row-gap: 25px;
   }
@@ -611,6 +622,7 @@ section {
 
 @media (width < 870px) {
   .section-div{
+    grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     row-gap: 20px;
   }
@@ -644,9 +656,21 @@ section {
   object-position: bottom right;
   width: 100%;
   border-radius: 10px 10px 0 0;
-  aspect-ratio: 4/5;
+  
   object-fit: cover;
   object-position: center;
+}
+
+@media (width >= 600px) {
+  .product img {
+    aspect-ratio: 4/5;
+  }
+}
+
+@media (width < 600px) {
+  .product img {
+    aspect-ratio: 6/7;
+  }
 }
 
 .product-description {
