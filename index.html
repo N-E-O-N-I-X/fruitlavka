@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruitlavka</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png" />
+    <link rel="stylesheet" href="styles/scrollbar.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body class="page">
+
+    <header class="header">
+      <a href="#" class="header-image-link logo-1"
+        ><img src="images/logo.png" class="header-image"
+      /></a>
+
+      <a href="#" class="header-image-link logo-2"
+        ><img src="images/logo-2.png" class="header-image"
+      /></a>
+
+      <form
+        class="search-form"
+        role="search"
+        aria-label="Форма поиска по сайту"
+      >
+        <label for="site-search" class="visually-hidden">Поиск по сайту</label>
+        <input
+          type="text"
+          id="site-search"
+          placeholder="Искать 🍉 здесь..."
+          class="search-input"
+          name="q"
+          aria-label="Строка поиска"
+        />
+        <button type="submit" aria-label="Начать поиск">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+          >
+            <path
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-width="3"
+              d="m21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0Z"
+            />
+          </svg>
+        </button>
+      </form>
+
+      <button class="catalog">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="#fff"
+            stroke-width="2.1"
+            fill="#fd6314"
+            d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1m10 10h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1M17 3c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4s-1.794-4-4-4M7 13c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4s-1.794-4-4-4"
+          />
+        </svg>
+        <span>Каталог</span>
+      </button>
+
+      <div class="header-buttons">
+        
+        <button class="burger-menu" aria-label="Открыть меню">☰</button>
+
+        <nav class="menu">
+          <button class="cart action-header-buttons">
+            <span class="cart-indicator"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" stroke="#383838" stroke-width="2">
+                <path
+                  stroke-linecap="round"
+                  d="M3.864 16.455c.546 2.183.819 3.274 1.632 3.91C6.31 21 7.435 21 9.685 21h4.63c2.25 0 3.375 0 4.19-.635c.813-.636 1.086-1.727 1.631-3.91c.858-3.432 1.287-5.147.387-6.301C19.622 9 17.853 9 14.316 9H9.685c-3.538 0-5.306 0-6.207 1.154c-.529.677-.6 1.548-.394 2.846"
+                />
+                <path
+                  d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4"
+                />
+                <path
+                  d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z"
+                />
+              </g>
+            </svg>
+            Корзина
+          </button>
+
+          <button class="contacts action-header-buttons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#383838"
+                d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81"
+              />
+            </svg>
+            Контакты
+          </button>
+
+          <button class="about action-header-buttons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 2h2v20H3zm16 0H6v20h13c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-1 10H9v-2h9v2zm0-4H9V6h9v2z"
+                fill="#383838"
+              />
+            </svg>
+            О нас
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="preview">
+        <div class="grid_preview">
+          <video
+            id="video"
+            src="videos/preview.mp4"
+            autoplay
+            loop
+            muted
+            style="max-width: 100%; height: auto"
+            alt="Видеоряд наших фруктов и ягод"
+          ></video>
+          <div class="grid_right-column">
+            <img
+              src="images/main/delivery.jpg"
+              class="delivery"
+              alt="Готовые к доставке продукты"
+            />
+            <img
+              src="images/main/discount.jpg"
+              class="discount"
+              alt="Куча вкуснейшей клубники"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="category-section">
+        <nav class="category-menu">
+          <a href="#fruits" class="fruit-button"><span>Фрукты <br>и <br>ягоды</span></a>
+          <a href="#vegetables" class="vegetable-button"><span>Овощи</span></a>
+          <a href="#exotic" class="exotic-button"><span>Экзотика</span></a>
+        </nav>
+      </section>
+
+      <section id="fruits" class="category fruits">
+        <h1 class="fruits-heading"><span>Фрукты и ягоды</span></h1>
+        <div class="fruits section-div">
+        </div>
+      </section>
+
+      <section id="vegetables" class="category vegetables">
+        <h1 class="vegetables-heading"><span>Овощи</span></h1>
+        <div class="vegetables section-div">
+        </div>
+      </section>
+
+      <section id="exotic" class="category exotic">
+        <h1 class="exotic-heading"><span>Экзотика</span></h1>
+        <div class="exotics section-div">
+        </div>
+      </section>
+    </main>
+
+    <template id="product-template">
+      <article class="product">
+        <img class="product-image" src="" alt="">
+        <div class="product-description">
+          <h2 class="product-title"></h2>
+          <p class="product-cost"></p>
+          <button class="add-product">В корзину</button>
+        </div>
+      </article>
+    </template>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <p>Мы используем cookies для улучшения работы сайта.</p>
+      <button id="acceptCookies">Хорошо</button>
+    </div>
+
+    <script src="scripts/preview.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/script.js"></script>
+ 
+    <div class="cart-popup hidden">
+      <h2>Корзина</h2>
+      <div class="cart-items"></div>
+      <div class="cart-summary">
+        <strong>Примерная стоимость без учета доставки:</strong> <span class="cart-total">0 ₽</span>
+      </div>
+      <div class="cart-popup-buttons">
+        <button class="send-to-telegram">Купить</button>
+        <button class="close-cart">Закрыть</button>
+      </div>
+      <p class="attencion"><span>Внимание</span><br>Кнопка "Купить" перебросит вас в чат с менеджером, где вы сможете обсудить заказ подробнее, учитывая время и место доставки.</p>
+    </div>
+  </body>
+</html>
