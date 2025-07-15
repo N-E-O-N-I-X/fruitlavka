@@ -175,7 +175,6 @@ button {
 .header .action-header-buttons {
   width: 60px;
   padding: 0;
-  aspect-ratio: 1/1;
   border: none;
   background-color: transparent;
   transition:  0.2s ease;
@@ -208,7 +207,7 @@ button {
   height: 10px;
   background-color: #e12709;
   border-radius: 50%;
-  display: none; /* по умолчанию скрыта */
+  display: none;
 }
 
 .cart-indicator.active {
@@ -693,6 +692,7 @@ section {
   border: #38383891 3px solid;
   color: #181818;
   padding: 10px;
+  transition: box-shadow 0.3s, border 0.3s;
 }
 
 .product img {
@@ -973,5 +973,58 @@ section {
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
+}
+
+.product.highlight {
+  border: 3px solid #fe9110;
+  box-shadow: 7px 7px 10px #fe9110;
+}
+
+@media (width < 1200px) {
+  .product.highlight {
+    box-shadow: 5px 5px 10px #fe9110;
+  }
+}
+
+@media (width < 600px) {
+  .product.highlight {
+    box-shadow: 3px 3px 10px #fe9110;
+  }
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 103%;
+  background: #fffdf7;
+  border: 2px solid #fe9110;
+  border-top: none;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  padding: 5px 0;
+}
+.search-suggestions.active {
+  display: block;
+}
+
+.search-suggestions div {
+  padding: 8px 12px;
   cursor: pointer;
+}
+
+.search-suggestions div:hover {
+  background-color: #fff2e0;
+  font-weight: bold;
+}
+
+.search-suggestions .category-label {
+  font-weight: bold;
+  background-color: #fe9110;
+  color: white;
+  padding: 6px 12px;
+  cursor: default;
 }

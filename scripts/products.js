@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryMap = {
     fruits: document.querySelector(".fruits.section-div"),
     vegetables: document.querySelector(".vegetables.section-div"),
-    exotic: document.querySelector(".exotics.section-div"),
+    exotic: document.querySelector(".exotic.section-div"),
   };
 
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");
@@ -124,7 +124,7 @@ if (savedTime) {
     description.appendChild(btn);
   }
 
-  // Отображение карточек
+
   products.forEach(product => {
     const clone = template.content.cloneNode(true);
     const card = clone.querySelector(".product");
