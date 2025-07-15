@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clone.querySelector(".product-title").textContent = product.title;
     clone.querySelector(".product-cost").textContent = product.price;
     const img = clone.querySelector(".product-image");
-    img.src = product.image || ""; // оставим пусто
+    img.src = product.image || "";
     img.alt = product.title;
 
     const container = categoryMap[product.category];
