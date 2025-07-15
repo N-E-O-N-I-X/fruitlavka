@@ -1,0 +1,24 @@
+{
+  "name": "fruitlavka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-E-O-N-I-X/fruitlavka.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N-E-O-N-I-X/fruitlavka/issues"
+  },
+  "homepage": "https://github.com/N-E-O-N-I-X/fruitlavka#readme",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0"
+  }
+}
