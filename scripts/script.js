@@ -58,7 +58,7 @@ document.querySelector(".search-form").addEventListener("submit", (event) => {
   input.addEventListener("input", () => {
     const query = input.value.trim().toLowerCase();
     const products = document.querySelectorAll(".product");
-    suggestionBox.innerHTML = "";
+    suggestionBox.textContent = "";
     products.forEach(card => card.classList.remove("highlight"));
 
     if (!query) {

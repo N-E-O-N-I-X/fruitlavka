@@ -14,11 +14,11 @@
   <body class="page">
 
     <header class="header">
-      <a href="#" class="header-image-link logo-1"
+      <a href="" class="header-image-link logo-1"
         ><img src="images/logo.png" class="header-image"
       /></a>
 
-      <a href="#" class="header-image-link logo-2"
+      <a href="" class="header-image-link logo-2"
         ><img src="images/logo-2.png" class="header-image"
       /></a>
 
@@ -30,6 +30,7 @@
         <label for="site-search" class="visually-hidden">Поиск по сайту</label>
         <input
           type="text"
+          autocomplete="off"
           id="site-search"
           placeholder="Искать 🍉 здесь..."
           class="search-input"
@@ -57,8 +58,6 @@
         <div class="search-suggestions visually-hidden" id="searchSuggestions"></div>
       </form>
       
-
-
       <button class="catalog">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +74,7 @@
         </svg>
         <span>Каталог</span>
       </button>
+      <div class="catalog-popup visually-hidden" id="catalogPopup"></div>
 
       <div class="header-buttons">
         
@@ -104,22 +104,50 @@
             </svg>
             Корзина
           </button>
-
-          <button class="contacts action-header-buttons">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-            >
+          <div class="popup_contacts-container">
+            <button class="contacts action-header-buttons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#383838"
+                  d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81"
+                />
+              </svg>
+              Контакты
+            </button>
+            <div class="contacts-popup">
+              <a class="manager" target="_blank" href="https://t.me/FRUITLAVKA24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="640" height="512" viewBox="0 0 640 512"><path fill="#383838" d="M488 192H336v56c0 39.7-32.3 72-72 72s-72-32.3-72-72V126.4l-64.9 39C107.8 176.9 96 197.8 96 220.2v47.3l-80 46.2C.7 322.5-4.6 342.1 4.3 357.4l80 138.6c8.8 15.3 28.4 20.5 43.7 11.7L231.4 448H368c35.3 0 64-28.7 64-64h16c17.7 0 32-14.3 32-32v-64h8c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24m147.7-37.4L555.7 16C546.9.7 527.3-4.5 512 4.3L408.6 64H306.4c-12 0-23.7 3.4-33.9 9.7L239 94.6c-9.4 5.8-15 16.1-15 27.1V248c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h184c30.9 0 56 25.1 56 56v28.5l80-46.2c15.3-8.9 20.5-28.4 11.7-43.7"/></svg>
+                Менеджер
+              </a>
+              <a class="telegram" target="_blank" href="https://t.me/fruitlavka">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#383838" d="m29.919 6.163l-4.225 19.925c-.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744l-3.106 2.988c-.344.344-.631.631-1.294.631l.463-6.556L24.919 8.72c.519-.462-.113-.719-.806-.256l-14.75 9.288l-6.35-1.988c-1.381-.431-1.406-1.381.288-2.044l24.837-9.569c1.15-.431 2.156.256 1.781 2.013z"/></svg>
+                Телеграм канал
+              </a>
+              <a class="instagram" target="_blank" href="https://www.instagram.com/fruitlavka/">
+                <svg class="insta-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="instaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#feda75" />
+                  <stop offset="50%" stop-color="#d62976" />
+                  <stop offset="100%" stop-color="#4f5bd5" />
+                </linearGradient>
+              </defs>
               <path
-                fill="#383838"
-                d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81"
+                class="insta-path"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.465 1.066C8.638 1.012 9.012 1 12 1c2.988 0 3.362.013 4.534.066c1.172.053 1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12c0 2.988-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.396 5.396 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066c-2.988 0-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.397 5.397 0 0 1-1.949-1.268a5.392 5.392 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12c0-2.988.013-3.362.066-4.534c.053-1.172.24-1.972.511-2.672a5.396 5.396 0 0 1 1.27-1.948a5.392 5.392 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511Zm8.98 1.98c-1.16-.053-1.508-.064-4.445-.064c-2.937 0-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.412 3.412 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445c0 2.937.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064c2.938 0 3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445c0-2.937-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.413 3.413 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379Zm-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986ZM8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996Zm10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89Z"
               />
             </svg>
-            Контакты
-          </button>
-
+                Инстаграм
+          </a>
+            </div>
+          </div>
           <button class="about action-header-buttons">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +222,9 @@
 
     <template id="product-template">
       <article class="product">
-        <img class="product-image" src="" alt="">
+        <div class="product-image-section">
+         <img class="product-image" src="" alt="">
+        </div>
         <div class="product-description">
           <h2 class="product-title"></h2>
           <p class="product-cost"></p>
@@ -214,15 +244,15 @@
  
     <div class="cart-popup hidden">
       <h2>Корзина</h2>
-      <div class="cart-items"></div>
-      <div class="cart-summary">
+          <div class="cart-items"></div>
+          <div class="cart-summary">
         <strong>Примерная стоимость без учета доставки:</strong> <span class="cart-total">0 ₽</span>
       </div>
       <div class="cart-popup-buttons">
-        <button class="send-to-telegram">Купить</button>
+        <button class="send-to-telegram">Оформить заказ</button>
         <button class="close-cart">Закрыть</button>
       </div>
-      <p class="attencion"><span>Внимание</span><br>Кнопка "Купить" перебросит вас в чат с менеджером, где вы сможете обсудить заказ подробнее, учитывая время и место доставки.</p>
+      <p class="attencion"><span>Внимание</span><br>Кнопка "Оформить заказ" перебросит вас в чат с менеджером, где вы сможете обсудить заказ подробнее, учитывая время и место доставки.</p>
     </div>
   </body>
 </html>

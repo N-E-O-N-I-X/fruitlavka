@@ -1,29 +1,31 @@
 const products = [
-  { title: "Черешня премиум Узбекская", price: "3900 руб/ящик", category: "fruits", image: "./images/products/cherry.jpg" },
-  { title: "Клубника Турция", price: "3200 руб/ящик (4 кг)", category: "fruits", image: "./images/products/strawberry1.jpg" },
-  { title: "Клубника Краснодар", price: "2600 руб/ящик (2.8 кг)", category: "fruits", image: "./images/products/strawberry2.jpg" },
-  { title: "Клубника Крым", price: "2600 руб/ящик (2.8 кг)", category: "fruits", image: "./images/products/strawberry3.jpg" },
-  { title: "Арбузы Иран", price: "180 руб/кг", category: "fruits", image: "./images/products/watermelon.jpg" },
-  { title: "Ананас самолетный премиум", price: "2000 руб/шт", category: "fruits", image: "./images/products/pineaple1.jpg" },
-  { title: "Ананас сладкий", price: "1200 руб/шт", category: "fruits", image: "./images/products/pineaple2.jpg" },
-  { title: "Голубика", price: "4400 руб/1 кг", category: "fruits", image: "./images/products/blueberry.jpg" },
-  { title: "Малина", price: "2200 руб/500 г", category: "fruits", image: "./images/products/raspberry.jpg" },
-  { title: "Ежевика", price: "2200 руб/500 г", category: "fruits", image: "./images/products/blackberry.jpg" },
-  { title: "Апельсины Турция", price: "2200 руб/6.5 кг", category: "fruits", image: "./images/products/orange.jpg" },
-  { title: "Персики", price: "4000 руб/ящик (4 кг)", category: "fruits", image: "./images/products/peach.jpg" },
-  { title: "Нектарины", price: "4000 руб/ящик (4 кг)", category: "fruits", image: "./images/products/nectarine.jpg" },
-  { title: "Абрикосы", price: "3900 руб/2 кг", category: "fruits", image: "./images/products/apricot.jpg" },
-  { title: "Помидоры узбекские супер-сладкие", price: "3200 руб/2.5 кг", category: "vegetables", image: "./images/products/tomato.jpg" },
-  { title: "Огурцы бакинские хрустящие", price: "800 руб/кг", category: "vegetables", image: "./images/products/cucamber.jpg" },
-  { title: "Овощной бокс", price: "4800 руб (5 кг)", category: "vegetables", image: "./images/products/vegetablebox.jpg" },
-  { title: "Авокадо Перу", price: "3500 руб/4 кг", category: "vegetables", image: "./images/products/avocado.jpg" },
-  { title: "Питахайя Вьетнам (белая, красная, жёлтая)", price: "1550 руб/кг", category: "exotic", image: "./images/products/pitahaya.jpg" },
-  { title: "Маракуйя Вьетнам", price: "2400 руб/кг", category: "exotic", image: "./images/products/passionfruit.jpg" },
-  { title: "Лонган", price: "950 руб/500 г", category: "exotic", image: "./images/products/longan.jpg" },
-  { title: "Манго жёлтое Тайланд", price: "600 руб/шт", category: "exotic", image: "./images/products/mango1.jpg" },
-  { title: "Манго Перу крупное премиум", price: "1100 руб/шт", category: "exotic", image: "./images/products/mango2.jpg" },
-  { title: "Мангустин", price: "2550 руб/кг", category: "exotic", image: "./images/products/mangosteen.jpg" },
-  { title: "Папайя Тайланд", price: "1700 руб/кг", category: "exotic", image: "./images/products/papaya.jpg" },
+  { title: "Черешня премиум Узбекская 2кг", price: "3900₽/шт", category: "fruits", image: "./images/products/cherry.jpg" },
+  { title: "Клубника Турция 4кг", price: "3200₽/шт", category: "fruits", image: "./images/products/strawberry1.jpg" },
+  { title: "Клубника Краснодар 2.8кг", price: "2600₽/шт", category: "fruits", image: "./images/products/strawberry2.jpg" },
+  { title: "Клубника Крым 2.8кг", price: "2600₽/шт", category: "fruits", image: "./images/products/strawberry3.jpg" },
+  { title: "Арбузы Иран 10кг", price: "1800₽/шт", category: "fruits", image: "./images/products/watermelon.jpg" },
+  { title: "Ананас самолетный премиум", price: "2000₽/шт", category: "fruits", image: "./images/products/pineaple1.jpg" },
+  { title: "Ананас сладкий", price: "1200₽/шт", category: "fruits", image: "./images/products/pineaple2.jpg" },
+  { title: "Голубика 250г", price: "1100₽/шт", category: "fruits", image: "./images/products/blueberry.jpg" },
+  { title: "Малина 500г", price: "2200₽/шт", category: "fruits", image: "./images/products/raspberry.jpg" },
+  { title: "Ежевика 500г", price: "2200₽/шт", category: "fruits", image: "./images/products/blackberry.jpg" },
+  { title: "Апельсины Турция 6.5кг", price: "2200₽/шт", category: "fruits", image: "./images/products/orange.jpg" },
+  { title: "Персики 4кг", price: "4000₽/шт", category: "fruits", image: "./images/products/peach.jpg" },
+  { title: "Нектарины 4кг", price: "4000₽/шт", category: "fruits", image: "./images/products/nectarine.jpg" },
+  { title: "Абрикосы 2кг", price: "3900₽/шт", category: "fruits", image: "./images/products/apricot.jpg" },
+  { title: "Помидоры узбекские супер-сладкие 2.5кг", price: "3200₽/шт", category: "vegetables", image: "./images/products/tomato.jpg" },
+  { title: "Огурцы бакинские хрустящие 1кг", price: "800₽/шт", category: "vegetables", image: "./images/products/cucamber.jpg" },
+  { title: "Овощной бокс 5кг", price: "4800₽/шт", category: "vegetables", image: "./images/products/vegetablebox.jpg" },
+  { title: "Авокадо Перу 4кг", price: "3500₽/шт", category: "vegetables", image: "./images/products/avocado.jpg" },
+  { title: "Питахайя Вьетнам красная 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya1.jpg" },
+  { title: "Питахайя Вьетнам белая 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya2.jpg" },
+  { title: "Питахайя Вьетнам желтая 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya3.jpg" },
+  { title: "Маракуйя Вьетнам 1кг", price: "2400₽/шт", category: "exotic", image: "./images/products/passionfruit.jpg" },
+  { title: "Лонган 500г", price: "950₽/шт", category: "exotic", image: "./images/products/longan.jpg" },
+  { title: "Манго жёлтое Тайланд", price: "600₽/шт", category: "exotic", image: "./images/products/mango1.jpg" },
+  { title: "Манго Перу крупное премиум", price: "1100₽/шт", category: "exotic", image: "./images/products/mango2.jpg" },
+  { title: "Мангустин 1кг", price: "2550₽/шт", category: "exotic", image: "./images/products/mangosteen.jpg" },
+  { title: "Папайя Тайланд 1кг", price: "1700₽/шт", category: "exotic", image: "./images/products/papaya.jpg" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
   const CART_TIMESTAMP_KEY = 'cartTimestamp';
-const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const ONE_DAY_MS = 3 * 24 * 60 * 60 * 1000;
 
 const savedTime = localStorage.getItem(CART_TIMESTAMP_KEY);
 
@@ -130,6 +132,9 @@ if (savedTime) {
     const card = clone.querySelector(".product");
     const title = product.title;
     const step = 1;
+
+
+    card.id = "product-" + title.toLowerCase().replace(/\s+/g, "-");
 
     card.querySelector(".product-title").textContent = title;
     card.querySelector(".product-cost").textContent = product.price;
@@ -289,4 +294,95 @@ document.addEventListener("click", (event) => {
   if (!isInsideCart && !isCartButton && !isCartControl && !isAddButton && !isCartItemControls) {
     popup.classList.add("hidden");
   }
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const catalogBtn = document.querySelector(".catalog");
+  const catalogPopup = document.getElementById("catalogPopup");
+
+  const categories = {
+    fruits: "Фрукты и ягоды",
+    vegetables: "Овощи",
+    exotic: "Экзотика"
+  };
+
+  const groupedProducts = {
+    fruits: [],
+    vegetables: [],
+    exotic: []
+  };
+
+  products.forEach(product => {
+    if (groupedProducts[product.category]) {
+      groupedProducts[product.category].push(product);
+    }
+  });
+
+  for (const [key, name] of Object.entries(categories)) {
+    const catTitle = document.createElement("div");
+    catTitle.className = "category-title";
+    catTitle.textContent = name;
+
+    const productList = document.createElement("div");
+    productList.className = "product-list";
+
+    groupedProducts[key].forEach(prod => {
+      const item = document.createElement("div");
+      item.className = "product-item";
+
+      const img = document.createElement("img");
+      img.src = prod.image || ""; // если пусто — не будет изображения
+      img.alt = prod.title;
+
+      const nameSpan = document.createElement("span");
+      nameSpan.textContent = prod.title;
+
+      item.appendChild(img);
+      item.appendChild(nameSpan);
+      item.addEventListener("click", () => {
+        const anchorId = "product-" + prod.title.toLowerCase().replace(/\s+/g, "-");
+        const target = document.getElementById(anchorId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        catalogPopup.classList.add("visually-hidden"); // Скрыть каталог
+      });
+
+      productList.appendChild(item);
+    });
+
+    catTitle.addEventListener("click", () => {
+      productList.classList.toggle("visible");
+    });
+
+    catalogPopup.appendChild(catTitle);
+    catalogPopup.appendChild(productList);
+  }
+
+  // Появление/скрытие
+  let insidePopup = false;
+
+  catalogBtn.addEventListener("mouseenter", () => {
+    catalogPopup.classList.remove("visually-hidden");
+  });
+
+  catalogPopup.addEventListener("mouseenter", () => {
+    insidePopup = true;
+  });
+
+  catalogBtn.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      if (!insidePopup) catalogPopup.classList.add("visually-hidden");
+    }, 200);
+  });
+
+  catalogPopup.addEventListener("mouseleave", () => {
+    insidePopup = false;
+    catalogPopup.classList.add("visually-hidden");
+  });
 });
