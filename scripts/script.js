@@ -6,12 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const aboutBtn = document.querySelector(".about");
   const aboutPopup = document.querySelector(".about-popup");
 
-  // Открытие/закрытие бургера
   burgerButton.addEventListener("click", () => {
     menu.classList.toggle("open");
   });
 
-  // Обычные кнопки (например, Корзина) — закрывают меню сразу
   document.querySelectorAll(".menu .action-header-buttons").forEach(btn => {
     if (!btn.classList.contains("contacts") && !btn.classList.contains("about")) {
       btn.addEventListener("click", () => {
@@ -34,15 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => menu.classList.remove("open"), 50);
   });
 
-  // Закрытие popup при клике вне
-  document.addEventListener("click", (e) => {
-    if (!contactsPopup.contains(e.target) && !contactsBtn.contains(e.target)) {
-      contactsPopup.classList.remove("visible");
-    }
-    if (!aboutPopup.contains(e.target) && !aboutBtn.contains(e.target)) {
-      aboutPopup.classList.remove("visible");
-    }
-  });
+
+  setTimeout(() => {
+    document.addEventListener("click", (e) => {
+      if (!contactsPopup.contains(e.target) && !contactsBtn.contains(e.target)) {
+        contactsPopup.classList.remove("visible");
+      }
+      if (!aboutPopup.contains(e.target) && !aboutBtn.contains(e.target)) {
+        aboutPopup.classList.remove("visible");
+      }
+    });
+  }, 0);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
