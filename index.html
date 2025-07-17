@@ -237,7 +237,7 @@
       <section class="preview">
         <div class="grid_preview">
           <video
-            id="video"
+            id="video-preview"
             src="videos/preview.mp4"
             autoplay
             loop
@@ -284,6 +284,31 @@
         <h1 class="exotic-heading"><span>Экзотика</span></h1>
         <div class="section-div exotic"></div>
       </section>
+
+      <section id="custom-cart" class="category">
+        <h1 class="custom-cart-heading"><span>Корзины</span></h1>
+        <div class="cart-grid">
+        <video
+            id="video-cart"
+            src="videos/cart.mp4"
+            autoplay
+            loop
+            muted
+            style="max-width: 100%; height: auto"
+            alt="Видеоряд наших корзинок"
+          ></video>
+          <div class="custom-cart-description">
+            <h2>Соберите свою идеальную фруктовую корзину</h2>
+            <p>У нас можно не только выбрать готовые наборы, но и создать собственную корзину - уникальную, как ваш вкус или повод. Хотите больше экзотики? Нужен акцент на ягодах? Или, может, подарок с особым посланием?
+<br><br>
+Мы с радостью поможем собрать корзину под ваш запрос.
+Оформление, состав, количество - всё обсуждается. А если нужны рекомендации - наш менеджер подскажет лучшие сочетания и сезонные фавориты.
+<br><br>
+💬 Просто напишите нам - и мы вместе соберём что-то по-настоящему вкусное и запоминающееся!</p>
+            <button class="custom-cart-button" id="custom-cart-button">Собрать корзину</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <template id="product-template">
@@ -322,6 +347,7 @@
       </p>
     </div>
 
+    <script src="scripts/cart.js"></script>
     <script src="scripts/preview.js"></script>
     <script src="scripts/products.js"></script>
     <script src="scripts/script.js"></script>

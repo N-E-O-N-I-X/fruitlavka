@@ -160,7 +160,7 @@ const products = [
     price: "1700₽/шт",
     category: "exotic",
     image: "./images/products/papaya.jpg",
-  },
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -492,7 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (target) {
           target.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-        catalogPopup.classList.add("visually-hidden"); // Скрыть каталог
+        catalogPopup.classList.add("visually-hidden");
       });
 
       productList.appendChild(item);

@@ -20,21 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // КОНТАКТЫ
   contactsBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     contactsPopup.classList.toggle("visible");
     aboutPopup.classList.remove("visible");
-    // Закрываем меню чуть позже
     setTimeout(() => menu.classList.remove("open"), 50);
   });
 
-  // О НАС
   aboutBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     aboutPopup.classList.toggle("visible");
     contactsPopup.classList.remove("visible");
-    // Закрываем меню чуть позже
     setTimeout(() => menu.classList.remove("open"), 50);
   });
 

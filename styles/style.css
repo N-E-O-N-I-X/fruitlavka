@@ -648,7 +648,7 @@ button {
   gap: 40px;
 }
 
-.preview #video {
+.preview #video-preview {
   width: 100%;
   border-top: #fd6314 8px dashed;
   border-left: #fd6314 8px dashed;
@@ -721,7 +721,7 @@ button {
 }
 
 @media (width < 850px) {
-  .preview #video {
+  .preview #video-preview {
     border-width: 6px;
   }
   .grid_right-column .delivery {
@@ -889,6 +889,125 @@ section {
 @media (width < 600px) {
   .category h1 {
     font-size: clamp(1.25rem, 1.1216rem + 0.5479vw, 1.875rem);
+  }
+}
+
+#custom-cart {
+  background-color: #fc661b;
+}
+
+#custom-cart h1 {
+  color: #fdf7e6;
+}
+
+#custom-cart .cart-logo {
+  max-width: 400px;
+  margin-left: 8%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  object-position: bottom;
+}
+
+.cart-grid {
+  margin: 0 7%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 120px;
+}
+
+.cart-grid #video-cart {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: 8px dashed #fdf7e6;
+}
+
+.custom-cart-description {
+  color: #fdf7e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-cart-description h2 {
+  margin: 0 0 30px 0;
+  font-size: clamp(1.25rem, 1.0574rem + 0.8219vw, 2.1875rem);
+  font-weight: 800;
+}
+
+.custom-cart-description p {
+  margin: 0 0 20px 0;
+  font-size: clamp(0.875rem, 0.8236rem + 0.2192vw, 1.125rem);
+  font-weight: 800;
+  width: 90%;
+}
+
+.custom-cart-button {
+  margin: auto auto 0 auto;
+  width: 50%;
+  padding: 18px;
+  background-color: #fdf7e6;
+  border: 4px solid #fe9110;
+  border-radius: 10px;
+  box-shadow: 3px 2px 5px #5353535e;
+  color: #fe9110;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  transition: scale 0.3s;
+}
+
+.custom-cart-button:hover {
+  scale: 1.06;
+}
+
+@media (width < 1250px) {
+  .custom-cart-description p {
+    width: 100%;
+  }
+
+  .cart-grid {
+    gap: 80px;
+  }
+}
+
+@media (width < 1000px) {
+  .cart-grid {
+    gap: 40px;
+  }
+
+  .custom-cart-button {
+    padding: 18px 14px; 
+  }
+}
+
+@media (width < 800px) {
+  .cart-grid {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr
+  }
+
+  .cart-grid #video-cart {
+    width: 70%;
+    justify-self: center;
+  }
+
+  .custom-cart-button {
+    margin-bottom: auto;
+    font-size: 16px;
+    border-width: 3px;
+    
+    padding: 12px 8px; 
+  }
+}
+
+@media (width < 390px) {
+  .cart-grid {
+    gap: 20px;
+  }
+
+  .custom-cart-button {
+    padding: 10px 6px; 
+    font-size: 14px;
   }
 }
 
