@@ -155,7 +155,7 @@ button {
 .header .search-form button {
   position: absolute;
   top: 0;
-  right: -15px;
+  right: 0;
   aspect-ratio: 1/1;
   height: 58px;
   border: none;
@@ -346,18 +346,6 @@ button {
   }
 }
 
-.popup_contacts-container:hover .contacts-popup,
-.contacts-popup:hover {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.popup_about-container:hover .about-popup,
-.about-popup:hover {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .contacts-popup.visible,
 .about-popup.visible {
   opacity: 1 !important;
@@ -384,16 +372,6 @@ button {
 .contacts-popup a:hover {
   background-color: #e7e6e650;
   color: #000;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .popup_contacts-container:hover .contacts-popup,
-  .contacts-popup:hover,
-  .popup_about-container:hover .about-popup,
-  .about-popup:hover {
-    opacity: 1;
-    pointer-events: auto;
-  }
 }
 
 .insta-icon .insta-path {
