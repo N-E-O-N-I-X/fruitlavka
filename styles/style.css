@@ -76,6 +76,12 @@ button {
   }
 }
 
+@media (width < 395px) {
+  .header {
+    gap: 10px;
+  }
+}
+
 .header-buttons {
   display: flex;
   justify-self: end;
@@ -254,8 +260,7 @@ button {
 
 .popup_contacts-container,
 .popup_about-container {
-  position: relative;
-  display: inline-block;
+  
 }
 
 .contacts-popup {
@@ -395,15 +400,13 @@ button {
   aspect-ratio: 1/1;
 }
 
-.catalog-container {
-  grid-area: catalog;
-}
 
 .catalog {
+  grid-area: catalog;
   display: flex;
   background-color: #fd6314;
   border: none;
-  border-radius: 15px;
+  border-radius: 10%;
   height: 57px;
   width: auto;
   transition: all 0.3s ease;
@@ -1385,10 +1388,4 @@ section {
   color: white;
   padding: 6px 12px;
   cursor: default;
-}
-
-.popup_about-container:hover .about-popup,
-.about-popup:hover {
-  opacity: unset !important;
-  pointer-events: unset !important;
 }
