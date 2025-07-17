@@ -258,11 +258,6 @@ button {
   fill: #fe9110;
 }
 
-.popup_contacts-container,
-.popup_about-container {
-  
-}
-
 .contacts-popup {
   position: absolute;
   top: 106%;
