@@ -1,9 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
   const burgerButton = document.querySelector(".burger-menu");
   const menu = document.querySelector(".menu");
+  const contactsBtn = document.querySelector(".contacts");
+  const contactsPopup = document.querySelector(".contacts-popup");
+  const aboutBtn = document.querySelector(".about");
+  const aboutPopup = document.querySelector(".about-popup");
 
+  // Открытие/закрытие бургера
   burgerButton.addEventListener("click", () => {
     menu.classList.toggle("open");
+  });
+
+  // Обычные кнопки (например, Корзина) — закрывают меню сразу
+  document.querySelectorAll(".menu .action-header-buttons").forEach(btn => {
+    if (!btn.classList.contains("contacts") && !btn.classList.contains("about")) {
+      btn.addEventListener("click", () => {
+        menu.classList.remove("open");
+      });
+    }
+  });
+
+  // КОНТАКТЫ
+  contactsBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    contactsPopup.classList.toggle("visible");
+    aboutPopup.classList.remove("visible");
+    // Закрываем меню чуть позже
+    setTimeout(() => menu.classList.remove("open"), 50);
+  });
+
+  // О НАС
+  aboutBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    aboutPopup.classList.toggle("visible");
+    contactsPopup.classList.remove("visible");
+    // Закрываем меню чуть позже
+    setTimeout(() => menu.classList.remove("open"), 50);
+  });
+
+  // Закрытие popup при клике вне
+  document.addEventListener("click", (e) => {
+    if (!contactsPopup.contains(e.target) && !contactsBtn.contains(e.target)) {
+      contactsPopup.classList.remove("visible");
+    }
+    if (!aboutPopup.contains(e.target) && !aboutBtn.contains(e.target)) {
+      aboutPopup.classList.remove("visible");
+    }
   });
 });
 

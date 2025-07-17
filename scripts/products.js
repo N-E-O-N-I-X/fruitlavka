@@ -1,31 +1,166 @@
 const products = [
-  { title: "Черешня премиум Узбекская 2кг", price: "3900₽/шт", category: "fruits", image: "./images/products/cherry.jpg" },
-  { title: "Клубника Турция 4кг", price: "3200₽/шт", category: "fruits", image: "./images/products/strawberry1.jpg" },
-  { title: "Клубника Краснодар 2.8кг", price: "2600₽/шт", category: "fruits", image: "./images/products/strawberry2.jpg" },
-  { title: "Клубника Крым 2.8кг", price: "2600₽/шт", category: "fruits", image: "./images/products/strawberry3.jpg" },
-  { title: "Арбузы Иран 10кг", price: "1800₽/шт", category: "fruits", image: "./images/products/watermelon.jpg" },
-  { title: "Ананас самолетный премиум", price: "2000₽/шт", category: "fruits", image: "./images/products/pineaple1.jpg" },
-  { title: "Ананас сладкий", price: "1200₽/шт", category: "fruits", image: "./images/products/pineaple2.jpg" },
-  { title: "Голубика 250г", price: "1100₽/шт", category: "fruits", image: "./images/products/blueberry.jpg" },
-  { title: "Малина 500г", price: "2200₽/шт", category: "fruits", image: "./images/products/raspberry.jpg" },
-  { title: "Ежевика 500г", price: "2200₽/шт", category: "fruits", image: "./images/products/blackberry.jpg" },
-  { title: "Апельсины Турция 6.5кг", price: "2200₽/шт", category: "fruits", image: "./images/products/orange.jpg" },
-  { title: "Персики 4кг", price: "4000₽/шт", category: "fruits", image: "./images/products/peach.jpg" },
-  { title: "Нектарины 4кг", price: "4000₽/шт", category: "fruits", image: "./images/products/nectarine.jpg" },
-  { title: "Абрикосы 2кг", price: "3900₽/шт", category: "fruits", image: "./images/products/apricot.jpg" },
-  { title: "Помидоры узбекские супер-сладкие 2.5кг", price: "3200₽/шт", category: "vegetables", image: "./images/products/tomato.jpg" },
-  { title: "Огурцы бакинские хрустящие 1кг", price: "800₽/шт", category: "vegetables", image: "./images/products/cucamber.jpg" },
-  { title: "Овощной бокс 5кг", price: "4800₽/шт", category: "vegetables", image: "./images/products/vegetablebox.jpg" },
-  { title: "Авокадо Перу 4кг", price: "3500₽/шт", category: "vegetables", image: "./images/products/avocado.jpg" },
-  { title: "Питахайя Вьетнам красная 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya1.jpg" },
-  { title: "Питахайя Вьетнам белая 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya2.jpg" },
-  { title: "Питахайя Вьетнам желтая 1кг", price: "1550₽/шт", category: "exotic", image: "./images/products/pitahaya3.jpg" },
-  { title: "Маракуйя Вьетнам 1кг", price: "2400₽/шт", category: "exotic", image: "./images/products/passionfruit.jpg" },
-  { title: "Лонган 500г", price: "950₽/шт", category: "exotic", image: "./images/products/longan.jpg" },
-  { title: "Манго жёлтое Тайланд", price: "600₽/шт", category: "exotic", image: "./images/products/mango1.jpg" },
-  { title: "Манго Перу крупное премиум", price: "1100₽/шт", category: "exotic", image: "./images/products/mango2.jpg" },
-  { title: "Мангустин 1кг", price: "2550₽/шт", category: "exotic", image: "./images/products/mangosteen.jpg" },
-  { title: "Папайя Тайланд 1кг", price: "1700₽/шт", category: "exotic", image: "./images/products/papaya.jpg" },
+  {
+    title: "Черешня премиум Узбекская 2кг",
+    price: "3900₽/шт",
+    category: "fruits",
+    image: "./images/products/cherry.jpg",
+  },
+  {
+    title: "Клубника Турция 4кг",
+    price: "3200₽/шт",
+    category: "fruits",
+    image: "./images/products/strawberry1.jpg",
+  },
+  {
+    title: "Клубника Краснодар 2.8кг",
+    price: "2600₽/шт",
+    category: "fruits",
+    image: "./images/products/strawberry2.jpg",
+  },
+  {
+    title: "Клубника Крым 2.8кг",
+    price: "2600₽/шт",
+    category: "fruits",
+    image: "./images/products/strawberry3.jpg",
+  },
+  {
+    title: "Арбузы Иран 10кг",
+    price: "1800₽/шт",
+    category: "fruits",
+    image: "./images/products/watermelon.jpg",
+  },
+  {
+    title: "Ананас самолетный премиум",
+    price: "2000₽/шт",
+    category: "fruits",
+    image: "./images/products/pineaple1.jpg",
+  },
+  {
+    title: "Ананас сладкий",
+    price: "1200₽/шт",
+    category: "fruits",
+    image: "./images/products/pineaple2.jpg",
+  },
+  {
+    title: "Голубика 250г",
+    price: "1100₽/шт",
+    category: "fruits",
+    image: "./images/products/blueberry.jpg",
+  },
+  {
+    title: "Малина 500г",
+    price: "2200₽/шт",
+    category: "fruits",
+    image: "./images/products/raspberry.jpg",
+  },
+  {
+    title: "Ежевика 500г",
+    price: "2200₽/шт",
+    category: "fruits",
+    image: "./images/products/blackberry.jpg",
+  },
+  {
+    title: "Апельсины Турция 6.5кг",
+    price: "2200₽/шт",
+    category: "fruits",
+    image: "./images/products/orange.jpg",
+  },
+  {
+    title: "Персики 4кг",
+    price: "4000₽/шт",
+    category: "fruits",
+    image: "./images/products/peach.jpg",
+  },
+  {
+    title: "Нектарины 4кг",
+    price: "4000₽/шт",
+    category: "fruits",
+    image: "./images/products/nectarine.jpg",
+  },
+  {
+    title: "Абрикосы 2кг",
+    price: "3900₽/шт",
+    category: "fruits",
+    image: "./images/products/apricot.jpg",
+  },
+  {
+    title: "Помидоры узбекские супер-сладкие 2.5кг",
+    price: "3200₽/шт",
+    category: "vegetables",
+    image: "./images/products/tomato.jpg",
+  },
+  {
+    title: "Огурцы бакинские хрустящие 1кг",
+    price: "800₽/шт",
+    category: "vegetables",
+    image: "./images/products/cucamber.jpg",
+  },
+  {
+    title: "Овощной бокс 5кг",
+    price: "4800₽/шт",
+    category: "vegetables",
+    image: "./images/products/vegetablebox.jpg",
+  },
+  {
+    title: "Авокадо Перу 4кг",
+    price: "3500₽/шт",
+    category: "vegetables",
+    image: "./images/products/avocado.jpg",
+  },
+  {
+    title: "Питахайя Вьетнам красная 1кг",
+    price: "1550₽/шт",
+    category: "exotic",
+    image: "./images/products/pitahaya1.jpg",
+  },
+  {
+    title: "Питахайя Вьетнам белая 1кг",
+    price: "1550₽/шт",
+    category: "exotic",
+    image: "./images/products/pitahaya2.jpg",
+  },
+  {
+    title: "Питахайя Вьетнам желтая 1кг",
+    price: "1550₽/шт",
+    category: "exotic",
+    image: "./images/products/pitahaya3.jpg",
+  },
+  {
+    title: "Маракуйя Вьетнам 1кг",
+    price: "2400₽/шт",
+    category: "exotic",
+    image: "./images/products/passionfruit.jpg",
+  },
+  {
+    title: "Лонган 500г",
+    price: "950₽/шт",
+    category: "exotic",
+    image: "./images/products/longan.jpg",
+  },
+  {
+    title: "Манго жёлтое Тайланд",
+    price: "600₽/шт",
+    category: "exotic",
+    image: "./images/products/mango1.jpg",
+  },
+  {
+    title: "Манго Перу крупное премиум",
+    price: "1100₽/шт",
+    category: "exotic",
+    image: "./images/products/mango2.jpg",
+  },
+  {
+    title: "Мангустин 1кг",
+    price: "2550₽/шт",
+    category: "exotic",
+    image: "./images/products/mangosteen.jpg",
+  },
+  {
+    title: "Папайя Тайланд 1кг",
+    price: "1700₽/шт",
+    category: "exotic",
+    image: "./images/products/papaya.jpg",
+  },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,34 +173,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
-  const CART_TIMESTAMP_KEY = 'cartTimestamp';
-const ONE_DAY_MS = 3 * 24 * 60 * 60 * 1000;
+  const CART_TIMESTAMP_KEY = "cartTimestamp";
+  const ONE_DAY_MS = 3 * 24 * 60 * 60 * 1000;
 
-const savedTime = localStorage.getItem(CART_TIMESTAMP_KEY);
+  const savedTime = localStorage.getItem(CART_TIMESTAMP_KEY);
 
-if (savedTime) {
-  const now = Date.now();
-  const timeDiff = now - parseInt(savedTime, 10);
+  if (savedTime) {
+    const now = Date.now();
+    const timeDiff = now - parseInt(savedTime, 10);
 
-  if (timeDiff > ONE_DAY_MS) {
-    localStorage.removeItem('cart');
-    localStorage.removeItem(CART_TIMESTAMP_KEY);
-    console.log("Корзина очищена — прошло больше суток");
+    if (timeDiff > ONE_DAY_MS) {
+      localStorage.removeItem("cart");
+      localStorage.removeItem(CART_TIMESTAMP_KEY);
+      console.log("Корзина очищена — прошло больше суток");
+    }
   }
-}
 
   function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    localStorage.setItem('cartTimestamp', Date.now().toString());
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartTimestamp", Date.now().toString());
   }
 
-    function updateCartIndicator() {
+  function updateCartIndicator() {
     const indicator = document.querySelector(".cart-indicator");
     if (indicator) {
       indicator.classList.toggle("active", Object.keys(cart).length > 0);
     }
-  } 
-
+  }
 
   function renderProductControls(productCard, title, step) {
     const description = productCard.querySelector(".product-description");
@@ -126,13 +260,11 @@ if (savedTime) {
     description.appendChild(btn);
   }
 
-
-  products.forEach(product => {
+  products.forEach((product) => {
     const clone = template.content.cloneNode(true);
     const card = clone.querySelector(".product");
     const title = product.title;
     const step = 1;
-
 
     card.id = "product-" + title.toLowerCase().replace(/\s+/g, "-");
 
@@ -176,7 +308,7 @@ if (savedTime) {
     }
 
     for (const title in cart) {
-      const product = products.find(p => p.title === title);
+      const product = products.find((p) => p.title === title);
       if (!product) continue;
 
       const item = document.createElement("div");
@@ -202,7 +334,9 @@ if (savedTime) {
       const amount = cart[title];
       const itemTotal = Math.round(amount * priceNum);
 
-      qty.textContent = `${amount.toFixed(2)} шт × ${formatPrice(priceNum)}₽ = ${formatPrice(itemTotal)}₽`;
+      qty.textContent = `${amount.toFixed(2)} шт × ${formatPrice(
+        priceNum
+      )}₽ = ${formatPrice(itemTotal)}₽`;
 
       const plus = document.createElement("button");
       plus.textContent = "+";
@@ -237,8 +371,8 @@ if (savedTime) {
   }
 
   function updateCard(title) {
-    const card = Array.from(document.querySelectorAll(".product")).find(p =>
-      p.querySelector(".product-title").textContent === title
+    const card = Array.from(document.querySelectorAll(".product")).find(
+      (p) => p.querySelector(".product-title").textContent === title
     );
     if (!card) return;
     if (cart[title]) {
@@ -256,28 +390,34 @@ if (savedTime) {
   renderCartItems();
 
   document.querySelector(".send-to-telegram").addEventListener("click", () => {
-  const items = [];
-  let total = 0;
+    const items = [];
+    let total = 0;
 
-  for (const title in cart) {
-    const product = products.find(p => p.title === title);
-    if (!product) continue;
+    for (const title in cart) {
+      const product = products.find((p) => p.title === title);
+      if (!product) continue;
 
-    const match = product.price.match(/(^|\s)(\d{2,6})/);
-    const priceNum = match ? parseFloat(match[2]) : 0;
-    const amount = cart[title];
-    const itemTotal = Math.round(priceNum * amount);
-    total += itemTotal;
+      const match = product.price.match(/(^|\s)(\d{2,6})/);
+      const priceNum = match ? parseFloat(match[2]) : 0;
+      const amount = cart[title];
+      const itemTotal = Math.round(priceNum * amount);
+      total += itemTotal;
 
-    items.push(`${title}\n${amount.toFixed(2)} шт × ${priceNum} ₽ = ${itemTotal} ₽`);
-  }
+      items.push(
+        `${title}\n${amount.toFixed(2)} шт × ${priceNum} ₽ = ${itemTotal} ₽`
+      );
+    }
 
-  const message = `🛒 Заказ с сайта:\n\n${items.join('\n\n')}\n\n💰 Итого: ${formatPrice(total)} ₽`;
-  const telegramUsername = "FRUITLAVKA24";
+    const message = `🛒 Заказ с сайта:\n\n${items.join(
+      "\n\n"
+    )}\n\n💰 Итого: ${formatPrice(total)} ₽`;
+    const telegramUsername = "FRUITLAVKA24";
 
-  const url = `https://t.me/${telegramUsername}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-});
+    const url = `https://t.me/${telegramUsername}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  });
 });
 
 document.addEventListener("click", (event) => {
@@ -291,15 +431,16 @@ document.addEventListener("click", (event) => {
   const isAddButton = event.target.closest(".add-product");
   const isCartItemControls = event.target.closest(".cart-item-controls");
 
-  if (!isInsideCart && !isCartButton && !isCartControl && !isAddButton && !isCartItemControls) {
+  if (
+    !isInsideCart &&
+    !isCartButton &&
+    !isCartControl &&
+    !isAddButton &&
+    !isCartItemControls
+  ) {
     popup.classList.add("hidden");
   }
 });
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const catalogBtn = document.querySelector(".catalog");
@@ -308,16 +449,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const categories = {
     fruits: "Фрукты и ягоды",
     vegetables: "Овощи",
-    exotic: "Экзотика"
+    exotic: "Экзотика",
   };
 
   const groupedProducts = {
     fruits: [],
     vegetables: [],
-    exotic: []
+    exotic: [],
   };
 
-  products.forEach(product => {
+  products.forEach((product) => {
     if (groupedProducts[product.category]) {
       groupedProducts[product.category].push(product);
     }
@@ -331,12 +472,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const productList = document.createElement("div");
     productList.className = "product-list";
 
-    groupedProducts[key].forEach(prod => {
+    groupedProducts[key].forEach((prod) => {
       const item = document.createElement("div");
       item.className = "product-item";
 
       const img = document.createElement("img");
-      img.src = prod.image || ""; // если пусто — не будет изображения
+      img.src = prod.image || "";
       img.alt = prod.title;
 
       const nameSpan = document.createElement("span");
@@ -345,7 +486,8 @@ document.addEventListener("DOMContentLoaded", () => {
       item.appendChild(img);
       item.appendChild(nameSpan);
       item.addEventListener("click", () => {
-        const anchorId = "product-" + prod.title.toLowerCase().replace(/\s+/g, "-");
+        const anchorId =
+          "product-" + prod.title.toLowerCase().replace(/\s+/g, "-");
         const target = document.getElementById(anchorId);
         if (target) {
           target.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -364,7 +506,6 @@ document.addEventListener("DOMContentLoaded", () => {
     catalogPopup.appendChild(productList);
   }
 
-  // Появление/скрытие
   let insidePopup = false;
 
   catalogBtn.addEventListener("mouseenter", () => {
