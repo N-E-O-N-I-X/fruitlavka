@@ -453,7 +453,8 @@ button {
 
 @media (width < 650px) {
   .catalog-popup {
-    left: 0%;
+    left: auto;
+    right: 0;
   }
 }
 
