@@ -317,13 +317,6 @@ button {
     max-width: 400px;
   }
 
-  .popup_contacts-container:hover .contacts-popup,
-  .contacts-popup:hover,
-  .popup_about-container:hover .about-popup,
-  .about-popup:hover {
-    opacity: unset !important;
-    pointer-events: unset !important;
-  }
 }
 
 @media (width < 650px) {

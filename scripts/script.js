@@ -25,12 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => menu.classList.remove("open"), 50);
   });
 
-  aboutBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    aboutPopup.classList.toggle("visible");
-    contactsPopup.classList.remove("visible");
+  let justOpened = false;
+
+aboutBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  aboutPopup.classList.toggle("visible");
+  contactsPopup.classList.remove("visible");
+  justOpened = true;
+  if (window.innerWidth < 1225) {
     setTimeout(() => menu.classList.remove("open"), 50);
-  });
+  }
+  setTimeout(() => justOpened = false, 300);
+});
+
+document.addEventListener("click", (e) => {
+  if (justOpened) return;
+
+  if (!contactsPopup.contains(e.target) && !contactsBtn.contains(e.target)) {
+    contactsPopup.classList.remove("visible");
+  }
+  if (!aboutPopup.contains(e.target) && !aboutBtn.contains(e.target)) {
+    aboutPopup.classList.remove("visible");
+  }
+});
+
 
 
   setTimeout(() => {
