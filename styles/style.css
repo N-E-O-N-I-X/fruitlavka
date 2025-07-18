@@ -327,7 +327,7 @@ button {
   }
   .about-popup {
     left: 10%;
-    top: 106%;
+    top: 85%;
     right: auto;
   }
 }
@@ -341,7 +341,7 @@ button {
   .about-popup {
     width: 400px;
     right: auto;
-    left: -4%;
+    left: 0.5%;
     max-width: 350px;
   }
 }
