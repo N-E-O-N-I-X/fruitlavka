@@ -261,7 +261,8 @@ button {
 .contacts-popup {
   position: absolute;
   top: 106%;
-  left: 50%;
+  left: auto;
+  right: 2%;
   transform: translateX(-50%);
   background: #fff;
   border: 1px solid #ccc;
