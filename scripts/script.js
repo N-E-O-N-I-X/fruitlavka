@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contactsPopup.classList.toggle("visible");
     aboutPopup.classList.remove("visible");
     justOpened = true;
-    if (window.innerWidth < 1225) {
-      setTimeout(() => menu.classList.remove("open"), 50);
-    }
     setTimeout(() => justOpened = false, 300);
   });
 
@@ -36,9 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     aboutPopup.classList.toggle("visible");
     contactsPopup.classList.remove("visible");
     justOpened = true;
-    if (window.innerWidth < 1225) {
-      setTimeout(() => menu.classList.remove("open"), 50);
-    }
+
     setTimeout(() => justOpened = false, 300);
   });
 

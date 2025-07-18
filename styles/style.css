@@ -628,6 +628,8 @@ button {
   border-left: #fd6314 8px dashed;
   border-bottom: #fd6314 8px dashed;
   border-radius: 7% 0 0 7%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .grid_right-column {
@@ -894,6 +896,8 @@ section {
   object-fit: cover;
   aspect-ratio: 1/1;
   border: 8px dashed #fdf7e6;
+  pointer-events: none;
+  user-select: none;
 }
 
 .custom-cart-description {
