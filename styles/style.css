@@ -428,6 +428,12 @@ button {
   }
 }
 
+@media (width < 500px) {
+  .catalog {
+    margin-left: -10px;
+  }
+}
+
 .catalog svg {
   width: 40px;
   aspect-ratio: 1/1;
