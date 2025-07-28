@@ -28,6 +28,7 @@
       >
         <label for="site-search" class="visually-hidden">Поиск по сайту</label>
         <input
+          autocomplete="off"
           type="text"
           id="site-search"
           placeholder="Искать 🍉 здесь..."
@@ -357,7 +358,10 @@
     </div>
 
     <div class="cart-popup hidden">
-      <h2>Корзина</h2>
+      <div class="cart-header">
+        <h2>Корзина</h2>
+        <button class="close-cart">Х</button>
+      </div>
       <div class="cart-items"></div>
       <div class="cart-summary">
         <strong>Примерная стоимость без учета доставки:</strong>
@@ -365,7 +369,6 @@
       </div>
       <div class="cart-popup-buttons">
         <button class="send-to-telegram">Оформить заказ</button>
-        <button class="close-cart">Закрыть</button>
       </div>
       <p class="attencion">
         <span>Внимание</span><br />Кнопка "Оформить заказ" перебросит вас в чат

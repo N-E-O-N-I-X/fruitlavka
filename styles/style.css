@@ -1283,6 +1283,36 @@ section {
   justify-content: space-between;
 }
 
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header button{
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 50%;
+  transition: opacity 0.3s, scale 0.3s;
+  outline: none;
+  height: 40px;
+  aspect-ratio: 1/1;
+  text-align: center;
+  align-items: center;
+}
+
+.cart-header button:hover {
+  opacity: 0.9;
+  scale: 1.1;
+}
+
+.cart-header button:focus-visible {
+  opacity: 0.9;
+  scale: 1.1;
+}
+
 .cart-popup-buttons button {
   color: #fff;
   border: none;
