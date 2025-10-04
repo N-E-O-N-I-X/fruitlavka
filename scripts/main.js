@@ -3,11 +3,10 @@ import { customCartMessage } from "./cart.js";
 import { search } from "./search.js";
 
 async function initialize() {
-  
-loadPreview();
+  loadPreview();
 
-await customCartMessage();
-await search();
+  await customCartMessage();
+  await search();
 }
 
 initialize()

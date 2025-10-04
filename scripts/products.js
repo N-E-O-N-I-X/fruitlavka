@@ -302,7 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let total = 0;
 
     if (Object.keys(cart).length === 0) {
-      cartItemsContainer.innerHTML = "<p>Корзина пуста</p>";
       cartTotal.textContent = "0 ₽";
       return;
     }
