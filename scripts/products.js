@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cart = JSON.parse(localStorage.getItem("cart") || "{}");
 
   const CART_TIMESTAMP_KEY = "cartTimestamp";
-  const ONE_DAY_MS = 3 * 24 * 60 * 60 * 1000;
+  const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
   const savedTime = localStorage.getItem(CART_TIMESTAMP_KEY);
 
